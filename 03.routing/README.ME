@@ -1,0 +1,7 @@
+docker build:
+docker build -t flask-routing .
+
+docker run:
+docker run --rm --network host -i --name=flask-routing -v $(pwd):/usr/src/app -w /usr/src/app flask-routing --host=0.0.0.0
+
+docker exec -it flask-routing /bin/bash

@@ -1,0 +1,5 @@
+docker run:
+docker run --rm -i -v $(pwd):/app -w /app flask flask run
+docker run --rm -p 5000:5000 -i --name=flask -v $(pwd):/app -w /app -e FLASK_APP=minimal-flask.py flask flask run
+
+docker exec -it flask /bin/bash
